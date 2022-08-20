@@ -16,16 +16,27 @@ const save_quote_position = () => {
 };
 
 const append_dragging_events = () => {
-    const quote_elements = document.querySelectorAll('.quote-element');
-
-    quote_elements.forEach(quote => {
-        quote.addEventListener('dragstart', () => {
-            quote.classList.add('dragging');
+    const get_updated_quotes = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const quote_elements = document.querySelectorAll(".quote-element");
+                resolve(quote_elements);
+            }, 350);
         });
+    };
 
-        quote.addEventListener('dragend', () => {
-            quote.classList.remove('dragging');
+    get_updated_quotes().then(quote_elements => {
+        quote_elements.forEach(quote => {
+            quote.ondragstart = () => {
+                quote.classList.add('dragging');
+            };
+
+            quote.ondragend = () => {
+                quote.classList.remove('dragging');
+            };
         });
+    }).catch(err => {
+        console.error(err);
     });
 };
 
@@ -52,8 +63,7 @@ const setup = () => {
 
     accept_btns.forEach(btn => {
         btn.addEventListener("click", () => {
-            alert("edit")
-            append_dragging_events();        
+            append_dragging_events();
         });
     });
 
@@ -66,7 +76,8 @@ const setup = () => {
 
 list_container.addEventListener("dragover", event => {
     event.preventDefault();
-    
+
+    append_dragging_events();
     const after_quote = get_next_quote(event.clientY);
     const quote = document.querySelector(".dragging");
 
@@ -81,7 +92,7 @@ list_container.addEventListener("dragover", event => {
 list_container.addEventListener("drop", event => {
     event.preventDefault();
     save_quote_position();
-})
+});
 
 append_dragging_events();
 setup();
