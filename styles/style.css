@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --container-color: #fff;
+    --theme-color-1: #49e09a;
+    --theme-color-2: #42ccdb;
+    --theme-hover-1: #98a1ca;
+    --theme-hover-2: #72d6c4;
+    --active-color-1: #41c788;
+    --active-color-2: #3bb3c0;
+    --cancel-color-1: #ef709b;
+    --cancel-color-2: #fa9372;
+    --hover-color: #8E49E8;
+    --focus-color: #8E49E8;
+
+    --dark-container-color: #27272E;
+    --dark-theme-color-1: #ff1b6b;
+    --dark-theme-color-2: #45caff;
+    --dark-active-color-1: #d40d52;
+    --dark-active-color-2: #136cd1;
+    --dark-theme-hover-1: #d6185b;
+    --dark-theme-hover-2: #3aa6d1;
+    --dark-hover-color: #e91bab;
+    --dark-focus-color: #e91bab;
+    --dark-field-color: #29292e;
+    --dark-track-color: rgb(27, 31, 39);
+
+    --list-length: 640px;
+    --theme-shift-delay: 0.5s;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    padding: 10px;
+    transition: var(--theme-shift-delay);
+    background: linear-gradient(to bottom, var(--theme-color-1) 0%, var(--theme-color-2) 100%);
+}
+
+body.dark {
+    background: linear-gradient(to bottom, var(--dark-theme-color-1) 0%, var(--dark-theme-color-2) 100%);
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transition: 0.5;
+}
+
+.contenido#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}

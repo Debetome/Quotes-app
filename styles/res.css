@@ -1,0 +1,99 @@
+@media only screen and (min-width: 1485px) {
+    #formulario {
+        margin-right: 100px;
+        width: 450px;
+    }
+
+    #switcher-box {
+        margin-right: 100px;
+        width: 450px;
+    }
+
+    #frases {
+        min-width: 750px;
+    }
+
+    :root {
+        --list-lenth: 750px;
+    }
+}
+
+@media only screen and (max-width: 1485px) {
+    #formulario {
+        margin-right: 100px;
+        width: 380px;
+    }
+
+    #switcher-box {
+        margin-right: 100px;
+        width: 380px;
+    }
+
+    #frases {
+        min-width: 680px;
+    }
+
+    :root {
+        --list-lenth: 680px;
+    }
+}
+
+@media only screen and (max-width: 1285px) {
+    #formulario {
+        margin-right: 85px;
+        width: 325px;
+    }
+
+    #switcher-box {
+        margin-right: 85px;
+        width: 325px;
+    }
+
+    #frases {
+        min-width: 630px;
+    }
+
+    :root {
+        --list-lenth: 630px;
+    }
+}
+
+@media only screen and (max-width: 1155px) {
+    #formulario {
+        margin-right: 65px;
+        width: 280px;
+    }
+
+    #switcher-box {
+        margin-right: 65px;
+        width: 280px;
+    }
+
+    #frases {
+        min-width: 520px;
+    }
+
+    :root {
+        --list-lenth: 520px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #formulario {
+        margin-right: 65px;
+        width: 230px;
+    }
+
+    #switcher-box {
+        margin-right: 65px;
+        width: 230px;
+    }
+
+    #frases {
+        min-width: 480px;
+    }
+
+    :root {
+        --list-lenth: 480px;
+    }
+}

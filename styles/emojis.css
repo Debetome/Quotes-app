@@ -1,0 +1,118 @@
+.emoji-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(192%, 102%);
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.emoji-btn:hover {
+    opacity: 0.8;
+}
+
+.emoji-btn::selection {
+    background: none;
+}
+
+#emoji-pick-frame {
+    position: absolute;
+    background: rgba(204, 204, 204, 0.4);
+    backdrop-filter: blur(8px);
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 400px;
+    border-radius: 10px;
+    padding: 25px;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    scrollbar-width: thin;
+    scrollbar-color: #919caa rgb(184, 181, 181);
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.4s ease;
+}
+
+#emoji-pick-frame.dark {
+    background: rgba(39, 39, 44, 0.7);
+    scrollbar-color: var(--dark-theme-color-1) var(--dark-track-color);
+}
+
+#emoji-pick-frame.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    user-select: all;
+}
+
+#emoji-pick-frame .emoji-container {
+    margin-top: -15px;
+    margin-bottom: 12px;
+    height: 60%;
+    width: 100%;
+    overflow: auto;
+}
+
+#emoji-pick-frame.active .emoji-container {
+    opacity: 1;
+}
+
+#emoji-pick-frame::-webkit-scrollbar {
+    width: 8px;
+}
+
+#emoji-pick-frame::-webkit-scrollbar-track {
+    background: rgb(184, 181, 181);
+}
+
+#emoji-pick-frame.dark::-webkit-scrollbar-track {
+    background: var(--dark-track-color);
+}
+
+#emoji-pick-frame::-webkit-scrollbar-thumb {
+    background: #919caa;
+}
+
+#emoji-pick-frame.dark::-webkit-scrollbar-thumb {
+    background: var(--dark-theme-color-1);
+}
+
+#emoji-pick-frame::-webkit-scrollbar-thumb:hover {
+    background: #78808b;
+}
+
+#emoji-pick-frame.dark::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-theme-hover-1);
+}
+
+#emoji-pick-frame::-webkit-scrollbar-thumb:active {
+    background: #575d64;
+}
+
+#emoji-pick-frame.dark::-webkit-scrollbar-thumb:active {
+    background: var(--dark-active-color-1);
+}
+
+#emoji-pick-frame .emoji-container .emoji {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 12px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#emoji-pick-frame .emoji-container .emoji:hover {
+    opacity: 0.6;
+}
+
+#emoji-pick-frame .emoji-container .emoji::selection {
+    background: none;
+}
+

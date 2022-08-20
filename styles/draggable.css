@@ -1,0 +1,8 @@
+.dragging {
+    display:block;
+    background:#f1f1f1;
+    -webkit-box-shadow: 2px 2px 1px 1px rgba(100, 100, 100, 0.39);
+    box-shadow: 8px 17px 1px 1px rgba(100, 100, 100, 0.39);
+    -webkit-transform: rotate(-3deg) skew(5deg);
+    transform: rotate(-3deg) skew(5deg);
+}

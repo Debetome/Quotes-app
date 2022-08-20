@@ -1,0 +1,226 @@
+.frases {
+    background: var(--container-color);
+    position: relative;
+    min-width: var(--list-length);
+    margin-right: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    max-height: 493px;
+    min-height: 493px;
+    overflow: hidden;
+    transition: all var(--theme-shift-delay) ease;
+}
+
+#frases.dark {
+    background: var(--dark-container-color);
+    color: #fff;
+}
+
+.frases h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.frases .upper-part {
+    display: flex;
+}
+
+.frases .upper-part button {
+    margin-left: auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background: linear-gradient(to bottom, var(--theme-color-1) 0%, var(--theme-color-2) 100%);
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.frases .upper-part button:hover {
+    border: 0.5px solid var(--hover-color);
+}
+
+.frases .upper-part button:active {
+    background: linear-gradient(to bottom, var(--active-color-1) 0%, var(--active-color-2) 100%);
+}
+
+.frases.dark .upper-part button {
+    background: linear-gradient(to bottom, var(--dark-theme-color-1) 0%, var(--dark-theme-color-2) 100%);
+    color: rgb(37, 37, 37);
+}
+
+.frases.dark .upper-part button:hover {
+    border: 0.5px solid var(--dark-hover-color);
+}
+
+.frases.dark .upper-part button:active {
+    background: linear-gradient(to bottom, var(--dark-active-color-1) 0%, var(--dark-active-color-2) 100%);
+}
+
+.lista-frases {
+    position: relative;
+    overflow: auto;
+    height: 360px;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #a5b6cc #ccc;
+}
+
+.lista-frases::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lista-frases::-webkit-scrollbar-thumb {
+    background: #a5b6cc;
+}
+
+.lista-frases::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+.lista-frases::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-hover-1);
+}
+
+#frases.dark .lista-frases {
+    scrollbar-color: var(--dark-theme-color-1) var(--dark-track-color);
+}
+
+#frases.dark .lista-frases::-webkit-scrollbar-thumb {
+    background: var(--dark-theme-color-1);
+}
+
+#frases.dark .lista-frases::-webkit-scrollbar-track {
+    background: var(--dark-track-color);
+}
+
+#frases.dark .lista-frases::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-theme-hover-1);
+}
+
+#frases.dark .lista-frases::-webkit-scrollbar-thumb:active {
+    background: var(--dark-theme-hover-1);
+}
+
+.lista-frases li {
+    position: relative;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    list-style: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+.lista-frases li .content {
+    max-width: calc(var(--list-length) - 60px);
+    overflow: hidden;
+}
+
+.lista-frases li .quote {
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.lista-frases li .author {
+    max-height: 25px;
+    overflow: hidden;
+}
+
+#frases.dark .lista-frases li {
+    background: var(--dark-field-color);
+    border: 1px solid #ccc;
+}
+
+#frases.dark .lista-frases li:hover {
+    background: var(--dark-container-color);
+    border: 1px solid var(--dark-hover-color);
+}
+
+.lista-frases li .delete {
+    position: absolute;
+    background: #e74c3c;
+    color: #fff;
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    right: -45px;
+    transform: translateY(-42%);
+    transition: all 0.2s ease;
+}
+
+.lista-frases li .edit {
+    position: absolute;
+    background: #3c6ae7;
+    color: #fff;
+    margin-top: 5px;
+    padding: 5px 9px;
+    cursor: pointer;
+    right: -45px;
+    transform: translateY(56%);
+    transition: all 0.3s ease;
+}
+
+.lista-frases li:hover {
+    background: linear-gradient(to right, #e1e3e6, #b2bdce);
+}
+
+.lista-frases li:hover .edit {
+    right: 0px;
+}
+
+.lista-frases li:hover .delete {
+    right: 0px;
+}
+
+.lista-frases li .edit:hover {
+    background: #2e50ad;
+}
+
+.lista-frases li .delete:hover {
+    background: #b33c2f;
+}
+
+#no-quotes {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: #ccc;
+    transition: all var(--theme-shift-delay) ease;
+}
+
+#no-quotes i {
+    font-size: 220px;
+}
+
+#no-quotes header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#no-quotes.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#no-quotes.dark {
+    color: rgb(82, 82, 82);
+}

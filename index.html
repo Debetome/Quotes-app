@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es_PE">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<meta content="X-Content-Type-Options=nosniff" http-equiv="Content-Type"/>
+	<meta charset="utf-8"/>
+	<title>Frases</title>
+	
+	<!-- Estilos -->
+	<link rel="stylesheet" href="styles/style.css"/>
+	<link rel="stylesheet" href="styles/column_rows.css"/>
+	<link rel="stylesheet" href="styles/form.css"/>
+	<link rel="stylesheet" href="styles/quotes.css"/>
+	<link rel="stylesheet" href="styles/form.css"/>
+	<link rel="stylesheet" href="styles/switcher_box.css"/>
+	<link rel="stylesheet" href="styles/pop_ups.css"/>
+	<link rel="stylesheet" href="styles/draggable.css"/>
+	<link rel="stylesheet" href="styles/emojis.css"/>
+	<link rel="stylesheet" href="styles/res.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+	<!-- Scripts -->
+	<script src="scripts/script.js" defer></script>
+	<script src="scripts/pop_ups.js" defer></script>
+	<script src="scripts/theme_toggle.js" defer></script>
+	<script src="scripts/draggable.js" defer></script>
+	<script src="scripts/undo_redo.js" defer></script>
+	<script src="scripts/emoji_picker.js" defer></script>
+	<script src="scripts/emojis.js" defer></script>
+</head>
+<body>
+	<div class="contenido" id="blur">
+		<div class="row">
+			<div class="column">
+				<!-- Componente que permite cambiar el tema -->
+				<div id="switcher-box">
+					<button class="switcher-btn" id="clear-btn"><i class="fas fa-sun"></i>Claro</button>
+					<button class="switcher-btn" id="dark-btn"><i class="fas fa-moon"></i>Oscuro</button>
+				</div>
+
+				<!-- Componente para crear nuevas frases -->
+				<div id="formulario" class="formulario">
+					<header>Nueva frase</header>
+					<div class="input-field">
+						<input id="content-input" class="content-input" type="text" placeholder="Contenido de frase"/>
+						<input id="author-input" class="author-input" type="text" placeholder="Autor de la frase"/>
+						<button id="add-quote">Añadir frase</button>
+						<span class="emoji-btn">&#128518</span>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<!-- Componente que contiene las listas de frases -->
+				<div id="frases" class="frases">
+					<div class="upper-part">
+						<h2>Lista de frases</h2>
+						<button id="delete-all-btn"><i class="fas fa-trash"></i> borrar todo</button>
+					</div>
+					<ul class="lista-frases">
+						<!-- Las frases van aqui -->
+					</ul>
+					<div id="no-quotes">
+						<i class="fas fa-box-open"></i>
+						<header>Sin frases por el momento</header>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Ventana para editar frases -->
+	<div id="edit-popup" class="pop-up">
+		<div class="upper-part">
+			<header>Editar frase</header>
+			<div class="input-field">
+				<button id="undo" class="arrow"><i class="fas fa-arrow-left"></i></button>
+				<button id="redo" class="arrow"><i class="fas fa-arrow-right"></i></button>
+				<button id="clear"><i class="fas fa-eraser"></i></button>
+			</div>
+		</div>
+		<input class="author-input edit-field" name="author" type="text" placeholder="Autor de la frase"/>
+		<textarea class="content-input edit-field" name="content" rows="5" cols="60" name="text" placeholder="Contenido de la frase"></textarea>
+		<button class="accept-btn">Editar</button>
+		<button class="cancel-btn">Cancelar</button>
+		<span class="emoji-btn edit-emoji-btn">&#128518</span>
+	</div>
+
+	<!-- Ventana para confirmar la eliminación de frases -->
+	<div id="delete-popup" class="pop-up">
+		<header>Eliminar frase</header>
+		<div class="confirm">
+			<span>Seguro que deseas eliminar esta frase escrita por <strong></strong>?</span>
+		</div>
+		<button class="accept-btn">Si</button>
+		<button class="cancel-btn">No</button>
+	</div>
+
+	<!-- Ventana para confirmar la eliminación de todas las frases -->
+	<div id="delete-all-popup" class="pop-up">
+		<header>Eliminar todo</header>
+		<div class="confirm">
+			<span>Seguro que deseas eliminar todas las frases?</span>
+		</div>
+		<button class="accept-btn">Si</button>
+		<button class="cancel-btn">No</button>
+	</div>
+
+	<div id="emoji-pick-frame" class="emoji-pick-frame">
+		<div class="emoji-container">
+		<!-- Aqui van los emojis -->
+		</div>
+	</div>
+</body>
