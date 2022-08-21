@@ -1,7 +1,6 @@
 const list_container = document.querySelector('.lista-frases');
 
-const save_quote_position = () => {
-    const quote_elements = document.querySelectorAll(".quote-element");   
+const save_quote_position = (quote_elements) => {
     if (quote_elements === null && [...quote_elements].length === 0) return;
 
     const quotes = [...quote_elements].map((item, _) => {
@@ -13,30 +12,19 @@ const save_quote_position = () => {
     });
 
     localStorage.setItem("Quotes", JSON.stringify(quotes));
+
+    display_quotes();
+    append_dragging_events(document.querySelectorAll(".quote-element"));
 };
 
-const append_dragging_events = () => {
-    const get_updated_quotes = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                const quote_elements = document.querySelectorAll(".quote-element");
-                resolve(quote_elements);
-            }, 350);
-        });
-    };
-
-    get_updated_quotes().then(quote_elements => {
-        quote_elements.forEach(quote => {
-            quote.ondragstart = () => {
-                quote.classList.add('dragging');
-            };
-
-            quote.ondragend = () => {
-                quote.classList.remove('dragging');
-            };
-        });
-    }).catch(err => {
-        console.error(err);
+const append_dragging_events = (quote_elements) => {
+    quote_elements.forEach(quote => {
+        quote.ondragstart = () => {
+            quote.classList.add('dragging');
+        };
+        quote.ondragend = () => {
+            quote.classList.remove('dragging');
+        };
     });
 };
 
@@ -56,28 +44,18 @@ const get_next_quote = (y_pos) => {
 const setup = () => {
     const accept_btns = document.querySelectorAll(".accept-btn");
     const cancel_btns = document.querySelectorAll(".cancel-btn");
+    const quote_elements = document.querySelectorAll(".quote-element");
+
+    append_dragging_events(quote_elements);
 
     add_button.addEventListener("click", () => {
-        append_dragging_events();
-    });
-
-    accept_btns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            append_dragging_events();
-        });
-    });
-
-    cancel_btns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            append_dragging_events();
-        });
+        const quote_elements = document.querySelectorAll(".quote-element");
+        append_dragging_events(quote_elements);
     });
 };
 
 list_container.addEventListener("dragover", event => {
     event.preventDefault();
-
-    append_dragging_events();
     const after_quote = get_next_quote(event.clientY);
     const quote = document.querySelector(".dragging");
 
@@ -91,9 +69,9 @@ list_container.addEventListener("dragover", event => {
 
 list_container.addEventListener("drop", event => {
     event.preventDefault();
-    save_quote_position();
+    const quote_elements = document.querySelectorAll(".quote-element");
+    save_quote_position(quote_elements);
 });
 
-append_dragging_events();
 setup();
 

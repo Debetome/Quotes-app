@@ -123,6 +123,10 @@
     word-wrap: break-word;
 }
 
+.lista-frases li::selection {
+    background: none;
+}
+
 .lista-frases li .content {
     max-width: calc(var(--list-length) - 60px);
     overflow: hidden;

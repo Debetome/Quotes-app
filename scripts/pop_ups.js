@@ -37,6 +37,9 @@ const show_edit_popup = (index) => {
 
         blur.classList.toggle('active');
         edit_popup.classList.toggle('active');
+
+        const quote_elements = document.querySelectorAll(".quote-element");
+        append_dragging_events(quote_elements);
     };
 
     cancel_btn.onclick = () => {

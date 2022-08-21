@@ -40,6 +40,7 @@ const append_emoji_events = () => {
     document.querySelectorAll("#emoji-pick-frame .emoji-container .emoji").forEach(emoji => {
         emoji.addEventListener("click", () => {
             if (!document.getElementById("edit-popup").classList.contains("active")) return;
+            if (edit_focus == null) edit_focus = [...document.querySelectorAll("#edit-popup .edit-field")][0];
             done[edit_focus.name].actions.push(edit_focus.value + emoji.innerText);
             done[edit_focus.name].index++;
         })
@@ -66,7 +67,6 @@ const set_done_defaults = () => {
         done[field.name] = {};
         done[field.name].actions = [];
         done[field.name].index = 0;
-        console.log(done)
 
         if (done[field.name].actions.length !== 0) return;
         done[field.name].actions.push(field.value);
