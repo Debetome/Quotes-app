@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 	<meta content="X-Content-Type-Options=nosniff" http-equiv="Content-Type"/>
 	<meta charset="utf-8"/>
-	<title>Frases</title>
+	<title>Quotes</title>
 	
 	<!-- Estilos -->
 	<link rel="stylesheet" href="styles/style.css"/>
@@ -36,17 +36,17 @@
 			<div class="column">
 				<!-- Componente que permite cambiar el tema -->
 				<div id="switcher-box">
-					<button class="switcher-btn" id="clear-btn"><i class="fas fa-sun"></i>Claro</button>
-					<button class="switcher-btn" id="dark-btn"><i class="fas fa-moon"></i>Oscuro</button>
+					<button class="switcher-btn" id="clear-btn"><i class="fas fa-sun"></i>Clear</button>
+					<button class="switcher-btn" id="dark-btn"><i class="fas fa-moon"></i>Dark</button>
 				</div>
 
 				<!-- Componente para crear nuevas frases -->
 				<div id="formulario" class="formulario">
-					<header>Nueva frase</header>
+					<header>New quote</header>
 					<div class="input-field">
-						<input id="content-input" class="content-input" type="text" placeholder="Contenido de frase"/>
-						<input id="author-input" class="author-input" type="text" placeholder="Autor de la frase"/>
-						<button id="add-quote">Añadir frase</button>
+						<input id="content-input" class="content-input" type="text" placeholder="Quote content"/>
+						<input id="author-input" class="author-input" type="text" placeholder="Quote author"/>
+						<button id="add-quote">Add quote</button>
 						<span class="emoji-btn">&#128518</span>
 					</div>
 				</div>
@@ -55,15 +55,15 @@
 				<!-- Componente que contiene las listas de frases -->
 				<div id="frases" class="frases">
 					<div class="upper-part">
-						<h2>Lista de frases</h2>
-						<button id="delete-all-btn"><i class="fas fa-trash"></i> borrar todo</button>
+						<h2>Quote list</h2>
+						<button id="delete-all-btn"><i class="fas fa-trash"></i> Remove all</button>
 					</div>
 					<ul class="lista-frases">
 						<!-- Las frases van aqui -->
 					</ul>
 					<div id="no-quotes">
 						<i class="fas fa-box-open"></i>
-						<header>Sin frases por el momento</header>
+						<header>No quotes at the moment</header>
 					</div>
 				</div>
 			</div>
@@ -73,37 +73,37 @@
 	<!-- Ventana para editar frases -->
 	<div id="edit-popup" class="pop-up">
 		<div class="upper-part">
-			<header>Editar frase</header>
+			<header>Edit quote</header>
 			<div class="input-field">
 				<button id="undo" class="arrow"><i class="fas fa-arrow-left"></i></button>
 				<button id="redo" class="arrow"><i class="fas fa-arrow-right"></i></button>
 				<button id="clear"><i class="fas fa-eraser"></i></button>
 			</div>
 		</div>
-		<input class="author-input edit-field" name="author" type="text" placeholder="Autor de la frase"/>
-		<textarea class="content-input edit-field" name="content" rows="5" cols="60" name="text" placeholder="Contenido de la frase"></textarea>
-		<button class="accept-btn">Editar</button>
-		<button class="cancel-btn">Cancelar</button>
+		<input class="author-input edit-field" name="author" type="text" placeholder="Quote author"/>
+		<textarea class="content-input edit-field" name="content" rows="5" cols="60" name="text" placeholder="Quote content"></textarea>
+		<button class="accept-btn">Edit</button>
+		<button class="cancel-btn">Cancel</button>
 		<span class="emoji-btn edit-emoji-btn">&#128518</span>
 	</div>
 
 	<!-- Ventana para confirmar la eliminación de frases -->
 	<div id="delete-popup" class="pop-up">
-		<header>Eliminar frase</header>
+		<header>Remove quote</header>
 		<div class="confirm">
-			<span>Seguro que deseas eliminar esta frase escrita por <strong></strong>?</span>
+			<span>Are you sure you want to remove this quote said by <strong></strong>?</span>
 		</div>
-		<button class="accept-btn">Si</button>
+		<button class="accept-btn">Yes</button>
 		<button class="cancel-btn">No</button>
 	</div>
 
 	<!-- Ventana para confirmar la eliminación de todas las frases -->
 	<div id="delete-all-popup" class="pop-up">
-		<header>Eliminar todo</header>
+		<header>Remove all</header>
 		<div class="confirm">
-			<span>Seguro que deseas eliminar todas las frases?</span>
+			<span>Are you sure you want to remove all quotes?</span>
 		</div>
-		<button class="accept-btn">Si</button>
+		<button class="accept-btn">Yes</button>
 		<button class="cancel-btn">No</button>
 	</div>
 
