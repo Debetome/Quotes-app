@@ -4,17 +4,16 @@ This is a simple web app made using simply vanilla javascript made for saving qu
 
 ![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/quotes_app.png)
 
-> This was a project was made with the purpose on mind of learning more of javascript as well as HTML as CSS
-
+> This was a project was made with the purpose on mind of learning more of javascript as well as HTML as CSS 
 
 ## Editing feature
 
-![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/edit_feature.png)
+![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/edit_feature.png) 
 
 
 ## Dark theme
 
-![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/dark_theme.png)
+![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/dark_theme.png) 
 
 
 > ## Features
