@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="styles/pop_ups.css"/>
 	<link rel="stylesheet" href="styles/draggable.css"/>
 	<link rel="stylesheet" href="styles/emojis.css"/>
+	<link rel="stylesheet" href="styles/source_btn.css"/>
 	<link rel="stylesheet" href="styles/res.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
@@ -29,6 +30,8 @@
 	
 	<script type="module" src="scripts/emoji_picker.js" defer></script>
 	<script type="module" src="scripts/emojis.js" defer></script>
+
+	<script src="scripts/source_btn.js" defer></script>
 </head>
 <body>
 	<div class="contenido" id="blur">
@@ -56,6 +59,7 @@
 				<div id="frases" class="frases">
 					<div class="upper-part">
 						<h2>Quote list</h2>
+						<button id="source"><i class="fas fa-code"></i> Source</button>
 						<button id="delete-all-btn"><i class="fas fa-trash"></i> Remove all</button>
 					</div>
 					<ul class="lista-frases">

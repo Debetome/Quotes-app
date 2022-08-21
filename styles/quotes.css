@@ -29,7 +29,7 @@
 }
 
 .frases .upper-part button {
-    margin-left: auto;
+    margin-left: 20px;
     margin-top: -10px;
     margin-bottom: 10px;
     background: linear-gradient(to bottom, var(--theme-color-1) 0%, var(--theme-color-2) 100%);
