@@ -30,8 +30,8 @@ redo_btn.addEventListener("click", () => {
 clear_off_btn.addEventListener("click", () => {
     if (edit_focus === null) return;
     if (edit_focus.value.length === 0) return;
+    
     edit_focus.value = "";
-
     done[edit_focus.name].actions.push("");
     done[edit_focus.name].index++;
 });
@@ -41,6 +41,8 @@ const append_emoji_events = () => {
         emoji.addEventListener("click", () => {
             if (!document.getElementById("edit-popup").classList.contains("active")) return;
             if (edit_focus == null) edit_focus = [...document.querySelectorAll("#edit-popup .edit-field")][0];
+            if (done == null && done[edit_focus.name] == null) set_done_defaults();
+
             done[edit_focus.name].actions.push(edit_focus.value + emoji.innerText);
             done[edit_focus.name].index++;
         })

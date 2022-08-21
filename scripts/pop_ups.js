@@ -40,11 +40,13 @@ const show_edit_popup = (index) => {
 
         const quote_elements = document.querySelectorAll(".quote-element");
         append_dragging_events(quote_elements);
+        set_edit_btn_events();
     };
 
     cancel_btn.onclick = () => {
         blur.classList.toggle('active');
         edit_popup.classList.toggle('active');
+        set_edit_btn_events();
     };
 };
 

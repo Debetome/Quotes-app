@@ -158,6 +158,7 @@ function append_emojis() {
 
 function setup_emojis(focused) {
     const emoji_elements = document.querySelectorAll(".emoji");
+
     emoji_elements.forEach(emoji => {
         emoji.onclick = () => {
             if (focus_dict[focused] !== null) focus_dict[focused].value = focus_dict[focused].value + emoji.innerText;

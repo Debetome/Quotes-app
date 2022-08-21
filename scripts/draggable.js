@@ -71,6 +71,7 @@ list_container.addEventListener("drop", event => {
     event.preventDefault();
     const quote_elements = document.querySelectorAll(".quote-element");
     save_quote_position(quote_elements);
+    set_edit_btn_events();
 });
 
 setup();
