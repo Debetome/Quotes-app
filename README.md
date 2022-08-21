@@ -2,7 +2,7 @@
 
 This is a simple web app made using simply vanilla javascript made for saving quotes which are also saved using the browser local storage, this app also has some extra features like editing and deleting quotes, drag and droping, dark and clear theme changing, among a few other more. 
 
-*Link:* https://debetome.github.io/quotesapp.github.io/
+*Link:* https://debetome.github.io/quotesapp.github.io/ 
 
 ![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/quotes_app.png)
 
