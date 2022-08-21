@@ -13,7 +13,7 @@ This is a simple web app made using simply vanilla javascript made for saving qu
 
 ## Dark theme
 
-![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/dark_theme.png) 
+![Real File](https://raw.githubusercontent.com/Debetome/quotesapp.github.io/master/screenshots/dark_theme.png)   
 
 
 > ## Features
